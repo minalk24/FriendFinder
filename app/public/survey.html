@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FriendFinder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="imageBackground"></div>
+    <div class="container">
+        <div class="card cardSurvey">
+            <h1 class="text-center"><img id="globe" class="img-responsive"
+                    src="http://bestanimations.com/Humans/Eyes/Eye-07-june.gif"><span id="heading">Friend Finder</span>
+            </h1>
+
+            <hr>
+            <h3 class="text-center heading2">Friend Finder!!!</h3>
+
+            <!--information -->
+            <div class="personInfo row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-9">
+                    <form id="info-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                            <div class="nameError">Please enter name</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="photo" id="photo" placeholder="Photo URL">
+                            <div class="photoError">Please enter photo URL</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+
+            <!-- survey questions -->
+            
+            <div class="questionArea">
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                        <ul class="options" id="optionsquestion1"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                        <ul class="options" id="optionsquestion2"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                       
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>You find it easy to stay relaxed and focused even when there is some pressure.
+                            </p>
+                        <ul class="options" id="optionsquestion3"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                       
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>You rarely do something just out of sheer curiosity.</p>
+                        <ul class="options" id="optionsquestion4"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>People can rarely upset you.</p>
+                        <ul class="options" id="optionsquestion5"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>It is often difficult for you to relate to other people’s feelings.
+                            </p>
+                        <ul class="options" id="optionsquestion6"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                        <ul class="options" id="optionsquestion7"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>You rarely get carried away by fantasies and ideas.
+                            </p>
+                        <ul class="options" id="optionsquestion8"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+                        <ul class="options" id="optionsquestion9"></ul>
+                    </div>
+                </div>
+                <div class="row question">
+                    <div class="col-lg-3 icon">
+                        
+                    </div>
+                    <div class="col-lg-9 questionoption">
+                        <p>You feel more energetic after spending time with a group of people.
+                            </p>
+                        <ul class="options" id="optionsquestion10"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- submit answers -->
+            <div class="text-center" id="buttonarea">
+                <button type="submit" class="btn btn-primary btn-md" id="find-btn" data-toggle="modal"
+                    data-target="#friendModal">Find Friend Finder</button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="friendModal" tabindex="-1" role="dialog"
+                aria-labelledby="friendModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="friendModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img class="img-responsive" id="friendPicture" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="/api/friends">API Friend List</a> |
+                    <a href="https://github.com/minalk24/FriendFinder">Github Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
