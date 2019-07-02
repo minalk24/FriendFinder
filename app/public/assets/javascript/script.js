@@ -81,12 +81,15 @@ $(document).on("ready", function () {
                 //once the server stores the new user's information, we send 
                 //a get request to get back the closest matching user's information and display it in modal
                 $.get("/api/match", function (data) {
+                    console.log(data);
                     $("#friendModalLabel").text(data.name);
                     $("#friendPicture").attr("alt", data.photoUrl);
                     $("#friendPicture").attr("src", data.photoUrl);
                     $("#friendPicture").css("max-height", "300px");
+                    $("#friendPicture").css("width", "100%");
                 });
             });
         }
     });
 });
+ 

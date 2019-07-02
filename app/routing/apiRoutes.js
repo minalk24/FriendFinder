@@ -26,7 +26,8 @@ module.exports = function (app) {
         matchIndex = i;
       }
     }
-    
+    // console.log(friendsData[matchIndex]);
+
     res.send(friendsData[matchIndex]);
   });
 
