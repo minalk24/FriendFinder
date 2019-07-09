@@ -19,7 +19,7 @@
 
 ## Images Of Bamazon
 
-![Bamazon App Images](friendfinderimg.png)
+![Friendfinder App Images](friendfinderimg.png)
 
 ## License
 Standard MIT License
