@@ -35,14 +35,14 @@ var friendsArray = [
   },
   {
     name: "Sansa",
-    photoUrl: "https://vignette.wikia.nocookie.net/gameofthrones/images/4/4b/Sophie_Turner_2019.jpg/revision/latest?cb=20190513214537",
+    photoUrl: "https://timedotcom.files.wordpress.com/2016/08/sansa-stark-game-of-thrones.jpg",
     answers: [
-      4,
-      1,
+      5,
       4,
       4,
       5,
-      1,
+      5,
+      3,
       3,
       5,
       4,
